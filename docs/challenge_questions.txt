@@ -1,0 +1,20 @@
+Challenge Questions
+
+Question #1 What attribute and value can you use to cause an <a> element to open the link in a new browser tab? 
+
+Answer #1: You would use the "target" attribute with the value of "_blank" to open a link in a new browser tab. The "target" attribute specifies where to open the link. The default value is "_self," which opens the link in the current tab. 
+
+Question #2
+How can you use the lang attribute if you have a webpage that uses more than one language? For example, let's say it has one <section> element where the contents are in French, and another <section> element where the contents are in Japanese. What can you do in this case?
+
+Lang is a global attribute, which means it can be used with all HTML elements. This means that you can add a lang attribute to elements of any level. We are taught initially to add it to the HTML element itself, thereby applying it to the entire document, but it can alternatively be added to smaller elements such as a header or paragraph or section. In this way, you can specify different language attributes to different pieces of the same document. 
+
+Ex: 	<section id="french" lang="fr">Lorem Ipsum</section>
+	<section id="japanese" lang="ja">Lorem Ipsum</section>
+
+Question #3
+One of the possible values for the name attribute of the meta element is description. How is a meta element with this attribute value used?
+
+A meta description is used to provide a short summary of the content on a page for SEO, and is typically displayed as part of a search snippet in a search engine's result's page. Best practices are always evolving, but current recommendations for length are between 50-160 characters, including spaces. The meta name's value is set to "description" and then an attribute of "content" is added, which contains the description itself.
+
+Ex:	<meta name="description" content="Fansite for the 1980 hit Turning Japanese">
