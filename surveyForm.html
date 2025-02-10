@@ -3,10 +3,25 @@
     <head>
         <meta charset="utf-8">
         <title>Survey Form Exercise</title>
+        <link rel="stylesheet" href="css/survey.css" />
+        <!--The following commented code shows how to use an internal stylesheet-->
+        <!-- <style>
+            h1 {
+                text-align: center;
+            }
+            .survey-form {
+                width: 80%;
+                margin: auto;
+            }
+            #submit-btn {
+                background: green;
+                color: white;
+            }
+        </style> -->
     </head>
     <body>
         <h1>Survey Form Exercise</h1>
-        <form action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post">
+        <form action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post" class="survey-form">
             <fieldset>
                 <legend>Your Information</legend>
                 <div>
@@ -43,7 +58,9 @@
                     <input type="checkbox" id="iguana" name="pets" value="iguana" />
                 </div>
             </fieldset>
-            <input type="submit" />
+            <!--The following commented code shows how to use inline styles.-->
+            <!-- <input type="submit" style="background: green; color: white" /> -->
+            <input type="submit" id="submit-btn" />
         </form>
     </body>
 </html>

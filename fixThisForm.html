@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Fix This Form Challenge Exercise</title>
+    </head>
+    <body>
+        <h1>Fix This Form Challenge Exercise</h1>
+        <section>
+            <p><em>The following exercise was meant to be completed in Codepen. So as to log steps and completion, I am also creating a file I can upload to GitHub.</em></p>
+            <h2>Instructions</h2>
+            <p>There are a few mistakes in the form you see above. Log into Codepen if you haven't, then fork this Code Challenge (find the Fork button on the bottom right) to your own account. Find and fix these errors:</p>
+            <ol>
+                <li>If you select a method of travel from the dropdown list and submit the form, the value does not show up in the echo back from the server. How can you fix it so that whatever value you choose from the dropdown shows up when you submit the form?</li>
+                <ul><li><em>Answer: The "select" form element lacked a "name" attribute. Without a "name" attribute, the data will be ignored.</em></li></ul>
+                <li>If you click on the labels "Frugal", "Moderate", or "Luxury" it does not focus on the associated radio button. How can you fix it so that clicking on each label will focus the correct radio button?</li>
+                <ul><li><em>Answer: The radio buttons lacked a "for" attribute for their label tag. This attribute must be the same as the "id" attribute of the "input" element to link them together.</em></li></ul>
+                <li>You should only be able to select one option from the three radio buttons. Right now, you can click on both the radio buttons for "Moderate" and "Luxury" and they will both be selected. How can you fix it so that only one can be selected at a time from all three?</li>
+                <ul><li><em>Answer: The name attributes for the Moderate and Luxury options were different.</em></li></ul>
+            </ol>
+        </section>
+        <section>
+            <form action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post">
+                <div>
+                    <label for="travel">Preferred method of travel:</label>
+                    <!--The following line of code lacked a 'name attribute'-->
+                    <select id="travel" name="travel" required>
+                        <option disabled selected value="">Choose ... </option>
+                        <option value="bike">Bike</option>
+                        <option value="car">Car</option>
+                        <option value="train">Train</option>
+                    </select>
+                </div>
+                <div>
+                <!--The following lacked 'for' attribute for their label tags, and the 'name' attribute for the Luxury radio button was different than those for Frugal and Moderate.-->
+                    <label for="budget">Travel Budget:</label>
+                    <input type="radio" id="frugal" name="budget" value="frugal" required/>
+                    <label for="frugal">Frugal</label>
+                    <input type="radio" id="moderate" name="budget" value="moderate" />
+                    <label for="moderate">Moderate</label>
+                    <input type="radio" id="luxury" name="budget" value="luxury">
+                    <label for="luxury">Luxury</label>
+                </div>
+                <div>
+                    <input type="submit" value="Go!" />
+                </div>
+            </form>
+        </section>
+    </body>
+</html>
