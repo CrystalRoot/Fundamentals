@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Code Challenge: CSS Selectors & Specificity</title>
+    <link rel="stylesheet" href="css/challenge-styles.css">
+</head>
+<body>
+    <h1>Code Challenge: CSS Selectors and Specificity</h1>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="3">
+                        1
+                    </th>
+                </tr>
+                <tr>
+                    <th>2</th><th>3</th><th>4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>5</th>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <td>9</td>
+                    <td>10</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- You do not need to change any code in the section below, it's just the instructions text -->
+
+    <hr />
+    <section>
+        <h2>Instructions</h2>
+        <p>Log into Codepen if you haven't, then fork this Code Challenge (find the Fork button on the bottom right) to your own account. Your goal will be to update the CSS for this table so that it appears as in the screenshot shown in the learning portal page for this Code Challenge. <strong>Do not modify the HTML code for this challenge, only the CSS.</strong></p>
+        <p>In the CSS panel of this Codepen, add three rulesets:</p>
+        <ol>
+            <li>Create a ruleset that targets both <b>td</b> and <b>th</b> elements</b>, using a grouping selector. Inside its declaration block, add a <b>border</b> property with the value of <b>1px solid</b>, a <b>padding</b> property with the value of <b>6px</b>, and a <b>width</b> property with a value of <b>100px</b>.</li>
+            <li>Create a ruleset that targets only <b>th</b> elements with the attribute of <b>colspan="3"</b>. Inside its declaration block, add a <b>background</b> property of <b>violet</b>.</li>
+            <li>Create a ruleset that targets only <b>th</b> elements that are descendants of <b>thead</b> elements. Inside its declaration block, add a <b>background</b> property of <b>palegreen</b>.</li>
+        </ol>
+    <p>Compare your resulting table with the one shown in the screenshot in the learning portal.</p>
+    <p>When you are done, consider: Why is the top row of the table <em>not</em> palegreen?</p>
+    <p><em>Answer:</em> The top row of the table is not palegreen because the attribute selector <code>th[colspan="3"]</code> is a form of class selector and therefore has greater weight than the type selector <code>thead th</code>.</p>
+    </section>
+</body>
+</html>

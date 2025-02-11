@@ -1,19 +1,58 @@
 body {
-    background: #b4eeca;
-    font-family: Tahoma, Arial, sans-serif;
+    background-image: linear-gradient(to bottom right, #8B4513, #F5DEB3);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Caudex, Garamond, serif;
 }
 
 h1 {
-    color: blueviolet;
-    font: 32px Garamond, Helvetica, serif;
+    color: #5a2d0c;
+    font: 32px Pacifico, Helvetica, sans-serif;
+    text-align: center;
 }
 
 table {
     width: 50%;
 }
 
+#menuh2 {
+    text-align: center;
+}
+
+h2 {
+    text-align: left;
+}
+
 thead {
     text-align: left;
+}
+
+#menu {
+    width: 50%;
+    border-style: hidden;
+    border-width: 5px;
+    border-radius: 12px;
+    background-color: #CD853F;
+}
+
+#review {
+    width: 30%;
+    border-style: hidden;
+    border-width: 5px;
+    border-radius: 12px;
+    background-color: #CD853F;
+}
+
+#contact {
+    width: 30%;
+    border-style: hidden;
+    border-width: 5px;
+    border-radius: 12px;
+    background-color: #CD853F;
+}
+
+address {
+    font-style: normal;
 }
 
 label {

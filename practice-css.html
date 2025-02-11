@@ -3,12 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <title>CSS Practice: CSS Corner Cafe</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caudex">
     <link rel="stylesheet" href="css/practice-styles.css">
 </head>
 <body>
     <h1>CSS Corner Cafe</h1>
-    <section>
-        <h2>Menu</h2>
+    <section id="menu">
+        <h2 id="menuh2">Menu</h2>
         <table>
             <thead>
                 <tr>
@@ -36,7 +38,7 @@
             </tbody>
         </table>
     </section>
-    <section>
+    <section id="review">
         <h2>Submit Your Review</h2>
         <form action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post">
             <label for="name">Name</label>
@@ -46,7 +48,7 @@
             <input type="submit" id="submit-btn" />
         </form>
     </section>
-    <section>
+    <section id="contact">
         <h2>Contact</h2>
         <p>Call us at: <a href="tel:+15555551212">1-555-555-1212</a></p>
         <address>

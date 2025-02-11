@@ -1,0 +1,32 @@
+body {
+    font-family: 'Sans Source Pro', sans-serif; 
+  }
+  
+  table {
+      margin: auto;
+  }
+  
+  th {
+      background: lightblue;
+  }
+  
+  td {
+      background: khaki;
+      text-align: center;
+  }
+
+  /*My code begins here; the above is exercise starter code*/
+
+  td, th {
+    border: 1px, solid;
+    padding: 6px;
+    width: 100px;
+  }
+
+  th[colspan="3"] {
+    background-color: violet;
+  }
+
+  thead th {
+    background-color: palegreen;
+  }
