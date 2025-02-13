@@ -1,0 +1,52 @@
+Challenge Questions 02
+
+Question #1: Aside from color names and hex color codes, what is another way to encode a CSS color value? Give an example.
+
+Answer: Colors can also be specified using RGB (or RGBA) values. RGB stands for Red, Green, Blue and defines the intensity of that particular color on a scale from 1 - 255. RGB(255,0,0) is red, RGB(0,0,0) is black, and so on. The A stands for alpha and represents the opacity of a color on a scale of 0.0 (transparent) to 1.0 (opaque).
+
+Question #2: Hex color codes typically have 6 characters that follow the #, with each set of 2 representing R (red), G (green), or B (blue), such as #ffffff. However, these two example hex codes are also valid: #fff and #ffffff44. Why is this, and what do the two hex codes above mean?
+
+Answer: Hexadecimal color codes represent the colors red, green, and blue where #rrggbb r stands for red, g for green, b for blue. The scale, as explained above with RGB values, is between 0 - 255 again, but represented as 00 (lowest value) - ff (highest value).
+
+A three-digit hex code is CSS shorthand, and can only be used when both rr/gg/bb values are the same. So the example above (#fff) is shorthand for #ffffff. Likewise, #fc9 is shorthand for #ffcc99. 
+
+A hex code with eight digits is the same as an RGBA value. It adds specifications for the alpha channel (opacity). 00 is fully transparent, FF is fully opaque.
+
+Question #3: What does this declaration do to an element? margin: 10px 20px 5px;
+
+Answer: The above declaration sets the margins around an HTML element. The top margin will be 10px, the right and left will be 20px, and the bottom will be 5px.
+
+Question #4: Two other common units for CSS lengths, aside from px, are em and rem. Briefly describe the meaning of each. 
+
+Answer: Em and Rem are units of relative measurement, as opposed to pixels, centimeters and the like, which are units of absolute measurement. Relative measurements are more dynamic for content that may be viewed on a wide variety of device screens. Em sets a size relative to the font-size of an element's parent element. 2em = 2x the size of the current font. Rem sets a size relative to the font-size of the root element. So
+
+li {
+   font-size: 2rem;
+}
+
+would not set the size at 2x the font size of the list item, but rather 2x the font size of the root element, which typically woudl be the <html> element.
+
+Question #5: How do you use the list-style property? Give an example to illustrate.
+
+Answer: The list-style property is shorthand for a combo of list-style-type, list-style-position, and list-style-image. If a value is absent, a default value for that property is used in its place. Default for style-type is disc, style-position is outside, and style-image is none. So list-style: circle; inside; will set a list with the type of circle, the position of inside, and the default value of none for image, as there was no alternative set.
+
+Question #6: What is a pseudo-element selector? This is not the same as a pseudo-class selector. Give an example to illustrate.
+
+Answer: A pseudo-element is used to style specific parts of an element, such as the first letter of an element, or the markers of list items.
+
+selector::pseudo-element {
+  property: value;
+}
+
+The following will target the first letter of each <p> element.
+
+p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+
+Certain constraints exist for pseudo-elements. For example, the first-letter pseudo-element may only be applied to block-level elements - that is, elements that always begin on a new line, and around which modern browsers automatically add a margin.
+
+Question #7: What is the !important rule in CSS, and why should you generally avoid it?
+
+The !important tag is used to override all previous styling rules for that property on the element, disrupting the cascade. This makes code confusing and debugging more time-consuming. It is best not to use it, as a courtesy to anyone also working on your project or who may come after you. One reason it might be used is to override a style you cannot adjust any other way, such as if you do not have access to do so.
