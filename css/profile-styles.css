@@ -1,3 +1,6 @@
+/*Credits: adapted from example template at learningrobo.com, with assistance from learning resources at W3Schools. Studies have not covered flexbox yet, so this was a learn-as-you-go from template code. */
+/*Disclaimer: expansive comments for my own educational purposes.*/
+
 /*Sets the style for the body element. Font-family from Google fonts, followed by fallback that should be compatible with modern browsers, followed by failsafe fallback. Set body element as a flexbox container with items positioned in the center of the screen both vertically and horizontally.  */
 body {
     font-family: Caudex, Garamond, serif;
@@ -23,7 +26,7 @@ html, body {
     padding: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     width: 70%;
-    height: 480px;
+    height: 530px;
     background: #12c2e9; 
     background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
     background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
@@ -38,7 +41,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 430px;
+    height: 480px;
     padding: 10px;
     margin: 30px;
     border-radius: 20px;
@@ -51,7 +54,7 @@ html, body {
     background: linear-gradient(to left, #434343, #000000); 
     flex: 1;
     max-width:70%;
-    height:430px;
+    height:480px;
     padding: 10px;
     margin: 20px;
     border-radius:30px;
@@ -95,6 +98,15 @@ img {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+#pet-img {
+    width: 150px;
+    height: 150px;
+    max-width: 150px;
+    border-radius: 50%;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 h2 {
     font-size: 24px;
     margin-bottom: 5px;
@@ -129,4 +141,77 @@ td {
   
 td:first-child {
     font-weight: bold;
+    width: 30%;
+}
+
+nav {
+    padding: 10px;
+    border: none;
+    text-align: center;
+}
+
+/*unvisited link; I checked but could not find shorthand for the following 4 properties.*/
+a:link {
+    color:#12c2e9;
+}
+
+/*visited link*/
+a:visited {
+    color:#f64f59;
+}
+
+/*mouseover link*/
+a:hover {
+    color:#c471ed;
+}
+
+/*selected link*/
+a:active {
+    color:#ee00ff;
+}
+
+/*Sets properties for HTML blockquote element with oversized quotation marks at the beginning and end.*/
+blockquote {
+    font-family: Georgia, serif;
+    position: relative;
+    margin: 0.5em;
+    padding: 0.5em 0.5em 0.5em 3em;
+    font-size: 16px;
+    font-style: italic;
+    /* line-height: 1.45; */
+    color: #9c9c9c;
+}
+
+/*Pseudoclass to create and format a beginning quotation mark before the blockquote. Uses a unicode escape sequence to refer to a special character, in this case a left-facing quotation mark, which will be inserted BEFORE the content of the blockquote element.*/
+blockquote::before {
+    font-family: Georgia, serif;
+    position: absolute;
+    font-size: 6em;
+    line-height: 1;
+    top: 0;
+    left: 0;
+    content: "\201C";
+}
+
+/*Pseudoclass to create and format an ending quotation mark after the blockquote. Uses a unicode escape sequence to refer to a special character, in this case a right-facing quotation mark, which will be inserted AFTER the content of the blockquote element.*/
+blockquote::after {
+    font-family: Georgia, serif;
+    position: absolute;
+    float:right;
+    font-size:6em;
+    line-height: 1;
+    right:0;
+    bottom:-0.5em;
+    content: "\201D";
+}
+
+/*Uses a descendant selector to target footer elements within the blockquote element.*/
+blockquote footer {
+    padding: 0 2em 0 0;
+    text-align: right;
+}
+
+/*Uses a descendant selector to target a <cite> element within the <blockquote> element, then insert a special character before the <cite> element. In this case, an em dash (the longest of the dashes). */
+blockquote cite::before {
+    content: "\2014";
 }
