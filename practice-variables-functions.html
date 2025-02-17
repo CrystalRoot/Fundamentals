@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Practice JS Variables & Functions</title>
+        <style>
+            #result {
+                text-align: center;
+                font-size: 5em;
+                font-family: 'Inter', 'Sans Source Pro', sans-serif;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <script>
+                function showOne() {
+                    displayResult(1);
+                }
+                showOne();
+                function displayResult(result) {
+                    document.getElementById('result').textContent = result;
+                }
+            </script>
+        </div>
+        <div id="result"></div>
+    </body>
+</html>
