@@ -4,26 +4,68 @@
         <meta charset="utf-8">
         <title>Practice JS Variables & Functions</title>
         <style>
-            #result {
+            /* #result {
                 text-align: center;
                 font-size: 5em;
                 font-family: 'Inter', 'Sans Source Pro', sans-serif;
                 margin-top: 10px;
-            }
+            } */
         </style>
     </head>
     <body>
-        <div>
+        <h1>Practice JS Variables and Functions</h1>
+        <div id="one">
+            <p>#1: Write a simple function that returns the number "1" and call it:</p>
+            <code>
+                function showOne() {<br>
+                    displayResult(1);<br>
+                }<br><br>
+                showOne();
+            </code>
+            <p id="oneResult"></p>
             <script>
                 function showOne() {
-                    displayResult(1);
+                    return(1);
                 }
-                showOne();
-                function displayResult(result) {
-                    document.getElementById('result').textContent = result;
-                }
+                const oneElement = document.getElementById("oneResult");
+                oneElement.textContent = showOne();
             </script>
         </div>
-        <div id="result"></div>
+        <div id="two">
+            <p>#2: Given the provided function, write its call:</p>
+            <code>
+                function showTwo() {<br>
+                    displayResult(2);<br>
+                }<br><br>
+                showTwo();
+            </code>
+            <p id="twoResult"></p>
+            <script>
+                function showTwo() {
+                    return(2);
+                }
+                const twoElement = document.getElementById("twoResult");
+                twoElement.textContent = showTwo();
+            </script>
+        </div>
+        <div id="three">
+            <p>#2: Given the provided call, write the appropriate function:</p>
+            <code>
+                function showThree() {<br>
+                    displayResult(3);<br>
+                }<br><br>
+                
+                showThree();<br>
+            </code>
+            <p id="threeResult"></p>
+            <script>
+                function showThree() {
+                    return(3);
+                }
+                const threeElement = document.getElementById("threeResult");
+                threeElement.textContent = showThree();
+            </script>
+        </div>
+        <p>The rest of the practice questions are in the accompanying txt file; I have learned what I needed to from this exercise without copying them all into this document.</p>
     </body>
 </html>

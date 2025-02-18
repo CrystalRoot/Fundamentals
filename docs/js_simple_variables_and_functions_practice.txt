@@ -1,0 +1,125 @@
+#1: SIMPLE FUNCTION
+
+function showOne() {
+    displayResult(1);
+}
+
+showOne();
+
+#2: SIMPLE FUNCTION; WRITE THE CALL.
+
+function showTwo() {
+    displayResult(2);
+}
+
+showTwo();
+
+#3: GIVEN THE CALL, WRITE THE FUNCTION.
+
+function showThree() {
+	displayResult(3);
+}
+
+showThree();
+
+#4: SIMPLE FUNCTION WITH SINGLE PARAMETER INSTEAD OF HARD-CODED VALUE.
+
+function showNum(num) {
+	displayResult(num);
+}
+
+showNum(4);
+
+#5: CALL THE SIMPLE FUNCTION CORRECTLY.
+
+function doubleNum(num) {
+    displayResult(num * 2);  
+}
+
+doubleNum(5);
+
+#6: WRITE THE FUNCTION FOR THE PROVIDED CALL.
+
+function tripleNum(num) {
+	displayResult(num * 3);
+}
+
+tripleNum(6);
+
+#7: SIMPLE FUNCTION WITH TWO PARAMS.
+
+function addNums(x, y) {
+    const sum = x + y;
+    displayResult(sum);
+}
+
+addNums(2, 3);
+
+#8: SIMPLE FUNCTION WITH TWO PARAMS AND RETURN VALUE SAVED TO VARIABLE. 
+
+function multiplyNums(x, y) {
+    return x * y;
+}
+
+const result = multiplyNums(6, 7);
+displayResult(result);
+
+**While this approach may look needlessly more complicated at the outset, it is actually the preferred and cleaner approach. Returning a value that can then be used outside the code block means the function is more dynamic and flexible, and it also embodies the separation of concerns. This function is concerned only with the calculation, not (for instance) with logging the result. Also easier to test and debug.
+
+#9: WRITE AND CALL SIMPLE FUNCTION TO SUBTRACT ONE VARIABLE FROM ANOTHER.
+
+function subtractNums(x, y) {
+	const diff = x - y;
+	displayResult(diff);
+}
+
+subtractNums(10, 5);
+
+-------------------------
+
+#1: WRITE A SIMPLE FUNCTION TO FIND AREA AND CALL IT.
+
+function getArea(width, length) {
+    return width * length;
+}
+const area = getArea(4, 5);
+
+#2: WRITE A SIMPLE FUNCTION TO FIND PERIMETER AND CALL IT.
+
+function getPerimeter(width, length) {
+    return (width * 2) + (length * 2);
+}
+
+const perimeter = getPerimeter(4, 5);
+
+#3: WRITE A SIMPLE FUNCTION TO CONVERT POUNDS TO OUNCES AND CALL IT.
+
+function getOuncesFromPounds(pounds) {
+    return pounds * 16;
+}
+
+const ounces = getOuncesFromPounds(4);
+
+#4 WRITE A SIMPLE FUNCTION TO CONVERT FEET TO INCHES AND CALL IT.
+
+function getInchesFromFeet(ft) {
+    return (ft * 12);
+}
+
+const inches = getInchesFromFeet(6);
+
+#5 WRITE A SIMPLE FUNCTION TO CONVERT OUNCES TO GRAMS AND CALL IT.
+
+function getGramsFromOunces(ounces) {
+    return (ounces * 28.3495);
+}
+
+const grams = getGramsFromOunces(5);
+
+#6: BONUS - WRITE A SIMPLE FUNCTION OF YOUR OWN AND CALL IT.
+
+function getCelsiusFromFarenheit(ft) {
+    return ((ft - 32) * 5/9);
+}
+
+const celsius = getCelsiusFromFarenheit(100);

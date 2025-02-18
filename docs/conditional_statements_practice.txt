@@ -1,0 +1,90 @@
+#1: FUNCTION CONTAINING SIMPLE CONDITIONAL STATEMENT.
+
+function isPositive(x) {
+    if (x > 0) {
+        displayResult("x is positive");
+    } else {
+        displayResult("x is 0 or negative");
+    }
+}
+
+isPositive(5);
+
+#2: COMPLETE THE FUNCTION.
+
+function biggerNum(x, y) {
+    if (x === y) {
+        return "Neither"; 
+    } 
+    else if (x > y) {
+        return x;
+    }
+    else {
+        return y;
+    }
+}
+
+displayResult(biggerNum(2, 3));
+
+#3: ADD AN ELSE/IF BLOCK TO THE FOLLOWING FUNCTION.
+
+function getStateName(abbrv) {
+    if (abbrv === "TX") {
+        displayResult("Texas");
+    } else if (abbrv === "CA") {
+        displayResult("California");
+    } else if (abbrv === "NY") {
+        displayResult("New York");
+    }  else if (abbrv === "WA") {
+        displayResult("Washington");
+    }
+}
+
+const stateName = getStateName("WA");
+
+#4: ADD AN ELSE CLAUSE TO HANDLE AN INVALID ABBREVIATION.
+
+function getStateName(abbrv) {
+    if (abbrv === "TX") {
+        displayResult("Texas");
+    } else if (abbrv === "CA") {
+        displayResult("California");
+    } else if (abbrv === "NY") {
+        displayResult("New York");
+    } else {
+        displayResult("Unknown");
+    }
+}
+
+const stateName = getStateName("ZZ");
+
+#5: CONVERT THE FUNCTION FROM THE PREVIOUS PROBLEM TO A SWITCH STATEMENT.
+
+function getStateName(abbrv) {
+    switch(abbrv) {
+        case "TX": displayResult("Texas"); break;
+        case "CA": displayResult("California"); break;
+        case "NY": displayResult("New York"); break;
+        case "WA": displayResult("Washington"); break;
+        default: displayResult("Unknown"); 
+    }
+}
+
+const stateName = getStateName("zz");
+
+function getMembershipPerks() {
+}
+
+#6: WRITE A FUNCTION CONTAINING A SWITCH STATEMENT THAT HANDLES VARIOUS LEVELS OF MEMBERSHIP PERKS.
+
+function getMembershipPerks(mLevel) {
+  switch(mLevel) {
+    case "gold": console.log("Unlimited Free Plays", "VIP Room Access"); break;
+    case "silver": console.log("VIP Room Access"); break;
+    case "bronze": console.log("VIP Room Access on weekdays"); break;
+    default: console.log("Invalid membership level")
+  }
+  
+}
+
+getMembershipPerks('gold');
