@@ -1,0 +1,54 @@
+Question #1: Aside from Math.floor and Math.random, name at least one more function/method of the Math global object, along with example code on how to use it. 
+
+Answer: The Math global object is static, meaning all of its methods and properties are accessed directly, without the need to instantiate the math object. Syntax to access Math methods is: Math.method(number), where number may be hard-coded or a variable.
+
+Math.min() and Math.max() find the lowest or highest value in a list of arguments. For example, Math.min(0, 1, 2, 3, 4); would return 0, and Math.max(0, 1, 2, 3, 4); would return 4.
+
+Question #2: What happens if you try to compare a numeric string and a number, and why? For example: '5' > 3
+
+If you try to compare a numeric value stored in a string to a number stored as a number, JS uses type coercion to force the numeric string to type="number" so it can perform the operation. This operation therefore works as if it were comparing two numbers. This conversion is temporary and persists only for the length of the operation; the original type of the string value is not permanently mutated. Explicit conversion is required for permanency.
+
+Question #3: You have learned how to use the addition assignment operator += with numbers. What happens if you use it with strings? Provide a code example along with what its output would be. 
+
+For numbers, let x = 5; x += 1 will increment the value of x by 1 each time it is called. For strings, it will add the character "1" to the end of the string each time it is called. So let x = "5"; x += 1 will result in "51", then "511" and so on. And let x = "batman"; x += 1 will result in "batman1", then "batman11" and so on.
+
+The question didn't ask, but I tested what would happen if I did the same thing with a simple array. let x = ["fry", "bat"]; x += 1 converted the array to a string consisting of every character including the comma but not the empty space, then added the character "1" to the end of it. So "fry,bat1" and so on.
+
+Question #4: You've learned about converting values to Boolean data type using the Boolean() function or the !! operator. How would you convert a value to a string in JavaScript? How would you convert a value to a number? Provide code examples. (Note: There are at least two ways to convert a value to a number in JavaScript. Try to give at least two answers.)
+
+To convert some value to a string, W3Schools says not to use the toString() method, as it is largely used internally by JS for type coercion and this may throw unexpected errors. So two alternate ways to convert a value to a string are with the global String() function or template literals. Examples: let num = 5; let str = String(num); would result in "5" (number stored in string type). Template literals are used to insert the value of a variable into a string. Syntax is to surround the string with backticks instead of single or double quotes, and then to surround the variable thus ${variable} so if num = 5, we could write let str = `The variable's value is ${num}`; which would show up as "The variable's value is 5"
+
+To convert some value to a number, you can use the global Number(). So if x = "5"; then let number = Number(x); would return number = 5. The unary operator can also be used to convert a variable to a number. So if x = "5"; then number = + x will result in number = 5.
+
+Question #5: It is also possible to place <script> elements inside the head of an HTML page, but typically the best practice is to add them to the bottom of the body. Conduct your own research and find out what happens if you place <script> elements in the head, and provide a reason why this is not recommended. 
+
+HTML permits the placement of <script> elements inside the <head> element, just as CSS <style> elements are usually placed. But this is not best practice because browsers read HTML from the top down, and that means everything within the <script> element must be executed before the browser continues rendering the rest of the page. This causes lags and delays, and can result in the page content appearing without appropriate styles until the script execution completes.
+
+Question #6: There are two ways to add comments to JavaScript: block comments and line comments. Provide examples of both ways.
+
+/*This is an example of a block (multi-line) comment. This content may span multiple lines*/
+const x = "batman // This is a single-line comment
+
+Question #7: Research at least one array method that has not been discussed yet and present it in your answer. Explain what it does and provide sample code to demonstrate how to use it. 
+
+Array.flat() is a non-mutating method that returns a new array. It "flattens" the elements in a multi-dimensional array to a specified depth. Default is to flatten only one level. You may specify as many levels as exist, or specify infinity to completely flatten. 
+
+let myArray = [1, 2, [3, 4, [5, 6]]];
+let defaultFlattened = myArray.flat(); 
+defaultFlattened = [1, 2, 3, 4, [5, 6]]
+
+or
+
+let myArray = [1, 2, [3, 4, [5, 6]]];
+let twoFlattened = myArray.flat(2); 
+twoFlattened = [1, 2, 3, 4, 5, 6]
+
+or
+
+let myArray = [1, [2, [3, [4, [5]]]]];
+let mostFlattened = myArray.flat(Infinity); 
+mostFlattened = [1, 2, 3, 4, 5]
+
+Question #8: What is the meaning of NaN (Not a Number) in JavaScript, and how is it used?
+
+NaN is a global property that is used in several ways. It is one of the falsy values. When it is one of the operands of any relational comparison, the result is always false. When compared to any other value, including another NaN value, it always compares unequal.
