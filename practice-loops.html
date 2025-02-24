@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Loops Practice</title>
+</head>
+<body>
+    <h1>Loops Practice</h1>
+    <p><u>Question #1:</u> What will be the value of <b>total</b> once the below loop has finished running?</p>
+    <div><pre><code>
+        let total = 0;
+        let i = 1;
+        while (i < 10) {
+            total += i;
+            i++;
+        };
+    </code></pre></div>
+    <p>The value of <b>total</b> once the loop has completed will be 45.</p>
+    <p>In its first iteration, i = 1. Since 1 < 10, the condition is true, so the code inside the code block executes. </p>
+    <p><code>total =+ i</code> adds the value of i (which in this case is 1) to total. </p>
+    <p><code>i++</code> increments i, so i is now 2.</p>
+    <p>Now i = 2. As 2 < 10, the code block executes again.</p>
+    <p><code>total =+ i</code> This time total = 1, and i = 2. So we add 1 + 2, and total is now 3. </p>
+    <p><code>i++</code> increments i, so i is now 3.</p>
+    <p>And so on. The value of <b>total</b> will keep increasing by i in each iteration</p>
+    <p>After the final iteration, i will increment to 10, which no longer satisfy the condition, and the loop exits.</p>
+    <p><b>Question #2:</b> Convert the while loop above to a for loop.</p>
+    <div><pre><code>
+        let total = 0
+        for (let i = 1; i < 10; i++) {
+	        total += i;
+        };
+    </code></pre></div>
+    <p>Initially I had declared <code>let total = 0</code> inside the loop, and this was incorrect. I see the issue now. When I did that, it reset <b>total</b> to 0 with every iteration, so the value was not cumulative. </p>
+
+    <p><b>Question #3:</b> Create a for loop that runs 10 times, each time doubling the value of total and resulting in a final value of 1024. Then add an <b>if</b> statement that checks if the value of total is greater than 50 and, if so, breaks out of the loop. The final value of total should be 64. </p>
+    <div><pre><code>
+        let total = 1;
+        for (let i = 0; i < 10; i++) {
+            total *= 2;
+            if (total > 50) {
+              break;
+            };
+        };
+    </code></pre></div>
+    <p><b>Question #4:</b> Create a for...of loop that iterates through the provided array and, with each iteration, adds the value of that index to <b>total</b>. Then add an if statement so it is only added to the total if it is a positive number. </p>
+    <div><pre><code>
+        const numbers = [3, -43, 25, -8, 3];
+        let total = 0;
+        for (const n of numbers) {
+            if (n > 0) {
+                total += n;
+            };
+        };
+    </code></pre></div>
+</body>
+</html>
