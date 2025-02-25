@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Array Methods Practice</title>
+</head>
+<body>
+    <h1>Array Methods Practice</h1>
+    <p><u>Question #1:</u> Concat two arrays into a single array and assign the return value to a new array.</p>
+    <div><pre><code>
+        const counties1 = ['Clare', 'Kerry', 'Galway']; 
+        const counties2 = ['Donegal', 'Kilkenny', 'Meath'];
+        const counties = counties1.concat(counties2); 
+    </code></pre></div>
+
+    <p><b>Question #2:</b> Create an array of animals and then sort it.</p>
+    <div><pre><code>
+        const animals = ["fox", "hare", "squirrel", "badger", "pony", "hedgehog"];
+        animals.sort();
+    </code></pre></div>
+
+    <p><b>Question #3:</b> Now reverse the above array you created. </p>
+    <div><pre><code>
+        animals.reverse();
+    </code></pre></div>
+
+    <p><b>Question #4:</b> Create an array with at least five items. Then use <code>slice</code> to remove the items in index 2 and 3 and place them in a new array.</p>
+    <div><pre><code>
+        const instruments = ["fiddle", "whistle", "accordion", "mandolin", "bodhr&aacute;n"];
+        const newInstruments = instruments.slice(2, 4);
+    </code></pre></div>
+
+    <p><b>Question #5:</b> Using the original array created in #4, add another item between index 2 and 3.</p>
+    <div><pre><code>
+        const instruments = ["fiddle", "whistle", "accordion", "mandolin", "bodhr&aacute;n"];
+        instruments.splice(3, 0, "guitar");
+    </code></pre></div>
+
+    <p><b>Question #6:</b> Using the original array created in #4, remove the items at index 2 and 3.</p>
+    <div><pre><code>
+        const instruments = ["fiddle", "whistle", "accordion", "mandolin", "bodhr&aacute;n"];
+        instruments.splice(2, 2);
+    </code></pre></div>
+
+    <p><b>Question #7:</b> Using the original array created in #4, replace the item at index 0 with a new item.</p>
+    <div><pre><code>
+        const instruments = ["fiddle", "whistle", "accordion", "mandolin", "bodhr&aacute;n"];
+        instruments.splice(0, 1, "bagpipes");
+    </code></pre></div>
+</body>
+</html>
