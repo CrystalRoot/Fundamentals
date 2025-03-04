@@ -1,0 +1,46 @@
+Question #1: You've learned that a typical for loop statement begins with three parts, which can be called the initialization, the condition, and the final expression, such as:
+for (let i = 0; i < 10; i++)
+Are any of these three parts optional, or are they all required? Explain.
+
+Expression 1 (initialization) is optional. You can omit it if your values are set before the loop starts. Expression 2 (condition) is optional. By default, if the condition is truthy the loop will continue and if it is falsy, it will end. Not supplying a condition thus creates an infinite loop, so a break must be provided somewhere inside the loop. Expression 3 is optional. It increments the value of the initial variable, so it can be omitted if you increment inside the loop. Thus, all three expressions are optional because there are various ways to write the same code. 
+
+Question #2: Name another array method that has not been covered and briefly explain what it does. Provide sample code.
+
+toSpliced() is a newer variation of splice(). Both splice() and toSpliced() are used to add new items to or remove items from an array. Splice() is mutating and toSpliced() is not; instead it returns a new array. Just as with splice(), the first param defines where new items should be added, the second defines how many elements should be removed, and any additional params define elements to be added.
+
+const instruments = ["fiddle", "whistle", "accordion"];
+let newInstruments = instruments.toSpliced(1, "mandolin");
+newInstruments = ["fiddle", "mandolin", "whistle", "accordion"];
+
+Question #3: Name another string method that has not been covered and briefly explain what it does. Provide sample code.
+
+padStart() pads a string from the start until it reaches a given length.
+
+let text = "g";
+let padText = text.padStart(4, "t");
+text = "tttg";
+
+The above code will pad the string held in "text" until it reaches 4 characters in length.
+
+Question #4: You've learned about an escape sequence \n that creates a newline in a string. Provide another example of an escape sequence, or escape characters, and explain what it does.
+
+\' or \" are escape characters that allow you to use a single quote (or double quote) inside a string that is surrounded by single quotes (or double quotes).
+
+let myString = "Charlie said I was "stupid"."
+The above will result in an error, because the computer cannot understand nested quotation marks. There are two fixes. One is to use double quotes for the outside marks and single for the inside ones (or vise versa). Or you can use an escape character thus:
+
+let myString = "Charlie said I was \"stupid\"."
+
+Question #5: You've learned that you can access the attributes of HTML elements using syntax such as: node.style.background and node.hidden. List at least two other HTML element attributes that you can access as JavaScript element node properties, and include sample code to demonstrate how you would use them in JavaScript. 
+
+Question #6: What is the return value from a call to node.removeChild()? What can you do with it? Show sample code to demonstrate how you might store the return value in a variable then use it.
+
+The return value of a call to node.removeChild() is the removed node (or null, if none exists). To use that return value, you assign it a variable.
+
+
+
+Question #7: What happens if you try to use the node.insertBefore() method to insert a node that already exists in the document, i.e. is already attached to the DOM? 
+
+Question #8: Research JavaScript events such as onclick/click, onmouseover/mouseover and find one that has not been discussed during this course. Give a brief explanation of what it does. 
+
+Question #9: You've seen how the array method sort() can be used to sort an array of strings alphabetically. What is its behavior when used to sort an array of numbers? For example, what would this array look like once sorted?: [1, 13, 1000, 29, 255]

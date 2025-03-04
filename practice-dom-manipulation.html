@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>DOM Manipulation Practice</title>
+</head>
+<body>
+    <h1>DOM Manipulation Practice</h1>
+    <p><u>Question #1:</u> Use JS to write some HTML. Create a UL element and append it to the DOM as a child of the document body. Then create two LI elements, give them appropriate text content, and append them as children of the UL element. </p>
+    <div><pre><code>
+        const animalList = document.createElement("ul");
+        document.body.appendChild(animalList);
+
+        const item1 = document.createElement("li");
+        item1.textContent = "fox";
+        animalList.appendChild(item1);
+
+        const item2 = document.createElement("li");
+        item2.textContent = "hare";
+        animalList.appendChild(item2);
+    </code></pre></div>
+
+    <p><b>Question #2:</b> Create an array of animals. Then use a for...of loop to create and append each animal in the array as a listitem child of an UL element. Once this is working, add at least one additional item to the list. You should be able to do this by simply adding it to the array. </p>
+    <div><pre><code>
+        const animals = ["fox", "hare", "squirrel", "badger", "pony", "hedgehog"];
+        
+        const animalList = document.createElement("ul");
+        document.body.appendChild(animalList);
+
+        for (const animal of animals) {
+            item = document.createElement("li");
+            item.textContent = animal;
+            animalList.appendChild(item);
+        }
+    </code></pre></div>
+
+    <p><b>Question #3:</b> Using the code created above, now write a line of code taht uses the removeChild() method and the lastChild property of the animalList element to remove only the last listitem element in the list. </p>
+    <div><pre><code>
+        animalList.removeChild(animalList.lastChild);
+    </code></pre></div>
+
+    <p><b>Question #4:</b> Using the code created in #2 & #3, now write a line of code that uses removeChild() and the firstChild property of the animalList element to remove only the first listitem element in the list. </p>
+    <div><pre><code>
+        animalList.removeChild(animalList.firstChild);
+    </code></pre></div>
+
+</body>
+</html>
